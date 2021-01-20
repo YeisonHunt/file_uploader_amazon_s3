@@ -4,6 +4,10 @@ https://affectionate-dubinsky-94eb35.netlify.app/
 
 The main code is on main.js, kind of simple to use.
 
+# Amazon s3 api docs
+
+https://docs.aws.amazon.com/code-samples/latest/catalog/code-catalog-javascript-example_code-s3.html
+
 # TypeScript environment for AWS Simple Storage Service (S3) examples
 This is a workspace where you can find working AWS SDK for JavaScript version 3 (v3) Amazon S3 examples. 
 
