@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.828.0/aws-sdk.min.js" integrity="sha512-Xxbv1gzbKJN+pYE7Bxms7JzjPYPYFLFJwF9lLj8h7y1mATQdePWQWgNxXF0sF9kwyGHOsUi4JER2NB5fcnLiJQ==" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script>
+        function getHtml(template) {
+            return template.join("\n");
+        }
+        listAlbums();
+    </script>
+</head>
+<body>
+<h1>Getting files from S3</h1>
+<div id="app"></div>
+</body>
+</html>
