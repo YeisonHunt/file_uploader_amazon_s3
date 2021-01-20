@@ -2,6 +2,8 @@
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.828.0/aws-sdk.min.js" integrity="sha512-Xxbv1gzbKJN+pYE7Bxms7JzjPYPYFLFJwF9lLj8h7y1mATQdePWQWgNxXF0sF9kwyGHOsUi4JER2NB5fcnLiJQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <script src="./main.js"></script>
     <script>
         function getHtml(template) {
@@ -9,9 +11,26 @@
         }
         listAlbums();
     </script>
+
+    <style>
+        .pointer {
+            cursor:pointer;
+            
+        }
+
+        .pointer:hover {
+            color:cornflowerblue;
+        }
+    </style>
 </head>
 <body>
-<h1>Getting files from S3</h1>
-<div id="app"></div>
+<div class="container">
+    <div class="row pt-5">
+        <div class="col">
+            <h1>Getting files from S3</h1>
+            <div id="app"></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -24,17 +24,19 @@ function listAlbums() {
 				var albumName = decodeURIComponent(prefix.replace('/', ''))
 				return getHtml([
 					'<li>',
-					'<span onclick="deleteAlbum(\'' + albumName + '\')">X</span>',
-					'<span onclick="viewAlbum(\'' + albumName + '\')">',
+					'<span class="pointer" onclick="deleteAlbum(\'' +
+						albumName +
+						'\')"><i class="far fa-trash-alt"></i>  ----- </span>',
+					'<span class="pointer" onclick="viewAlbum(\'' + albumName + '\')">',
 					albumName,
-					'</span>',
+					'<i class="far fa-folder"></i></span>',
 					'</li>',
 				])
 			})
 			var message = albums.length
 				? getHtml([
 						'<p>Click on an album name to view it.</p>',
-						'<p>Click on the X to delete the album.</p>',
+						'<p>Click on the trash icon to delete the album.</p>',
 				  ])
 				: '<p>You do not have any albums. Please Create album.'
 			var htmlTemplate = [
@@ -43,7 +45,7 @@ function listAlbums() {
 				'<ul>',
 				getHtml(albums),
 				'</ul>',
-				'<button onclick="createAlbum(prompt(\'Enter Album Name:\'))">',
+				'<button class="btn btn-primary" onclick="createAlbum(prompt(\'Enter Album Name:\'))">',
 				'Create New Album',
 				'</button>',
 			]
@@ -52,7 +54,7 @@ function listAlbums() {
 	})
 }
 
-function createAlbum(albumName) {  
+function createAlbum(albumName) {
 	albumName = albumName.trim()
 	if (!albumName) {
 		return alert('Album names must contain at least one non-space character.')
@@ -97,12 +99,12 @@ function viewAlbum(albumName) {
 				'<img style="width:128px;height:128px;" src="' + photoUrl + '"/>',
 				'</div>',
 				'<div>',
-				'<span onclick="deletePhoto(\'' +
+				'<span class="pointer" onclick="deletePhoto(\'' +
 					albumName +
 					"','" +
 					photoKey +
 					'\')">',
-				'X',
+				'<i class="far fa-trash-alt"></i>',
 				'</span>',
 				'<span>',
 				photoKey.replace(albumPhotosKey, ''),
@@ -112,7 +114,7 @@ function viewAlbum(albumName) {
 			])
 		})
 		var message = photos.length
-			? '<p>Click on the X to delete the photo</p>'
+			? '<p>Click on the trash icon to delete the photo</p>'
 			: '<p>You do not have any photos in this album. Please add photos.</p>'
 		var htmlTemplate = [
 			'<h2>',
@@ -122,11 +124,11 @@ function viewAlbum(albumName) {
 			'<div>',
 			getHtml(photos),
 			'</div>',
-			'<input id="photoupload" type="file" accept="image/*">',
-			'<button id="addphoto" onclick="addPhoto(\'' + albumName + '\')">',
+			'<input  id="photoupload" type="file" accept="image/*">',
+			'<button class="btn btn-info" id="addphoto" onclick="addPhoto(\'' + albumName + '\')">',
 			'Add Photo',
 			'</button>',
-			'<button onclick="listAlbums()">',
+			'<button class="btn btn-secondary" onclick="listAlbums()">',
 			'Back To Albums',
 			'</button>',
 		]
