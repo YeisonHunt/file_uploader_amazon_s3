@@ -1,3 +1,9 @@
+# Demo
+
+https://affectionate-dubinsky-94eb35.netlify.app/
+
+The main code is on main.js, kind of simple to use.
+
 # TypeScript environment for AWS Simple Storage Service (S3) examples
 This is a workspace where you can find working AWS SDK for JavaScript version 3 (v3) Amazon S3 examples. 
 
